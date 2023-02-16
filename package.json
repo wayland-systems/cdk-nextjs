@@ -27,7 +27,8 @@
     "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
-    "projen": "npx projen"
+    "projen": "npx projen",
+    "postinstall": "npx projen compile"
   },
   "author": {
     "name": "JetBridge",
@@ -74,6 +75,7 @@
     "@types/micromatch": "^4.0.2",
     "aws-lambda": "^1.0.7",
     "cross-spawn": "^7.0.3",
+    "datadog-lambda-js": "^6.86.0",
     "esbuild": "0.15.18",
     "fs-extra": "^10.1.0",
     "glob": "^8.0.3",
@@ -83,7 +85,8 @@
     "node-fetch": "^3.3.0",
     "serverless-http": "^3.1.0"
   },
-  "bundledDependencies": [
+  "bundledDependencies": [  
+    "datadog-lambda-js",
     "@aws-sdk/client-s3",
     "@types/aws-lambda",
     "@types/cross-spawn",
